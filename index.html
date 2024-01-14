@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Popup Box</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container"></div>
+    <div id="modelBox">
+      <img src="./model.jpg" width="100%" draggable="false" />
+      <div class="offer-text">
+        <h2>Get 15% OFF</h2>
+        <small>on all beauty products</small>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, atque
+          omnis voluptate delectus in exercitationem ea beatae.
+        </p>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <img src="./close.png" draggable="false" class="close-icon" />
+    </div>
+
+    <script>
+      const modelBox = document.getElementById("modelBox");
+      const closeIcon = document.querySelector(".close-icon");
+
+      closeIcon.addEventListener("click", () => {
+        modelBox.style.display = "none";
+      });
+      document.onmouseleave = function () {
+        modelBox.style.display = "block";
+      };
+    </script>
+  </body>
+</html>
